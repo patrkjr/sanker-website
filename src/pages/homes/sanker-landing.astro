@@ -13,7 +13,7 @@ import Testimonials from '~/components/widgets/Testimonials.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Sanker Landing',
+  title: 'Sanker - Find dit næste eventyr',
 };
 ---
 
@@ -22,16 +22,15 @@ const metadata = {
   <Fragment slot='header'>
     <Header
       links={[
-        { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/patrkjr' },
+        { text: 'Hjem', href: '#' },
+        { text: 'Om Sanker', href: '#about' },
+        { text: 'Funktioner', href: '#features' },
+        { text: 'Sikkerhed', href: '#safety' },
+        { text: 'Kontakt', href: '#contact' },
       ]}
       actions={[
         {
-          text: 'Hire me',
+          text: 'Download appen',
           href: '#',
         },
       ]}
@@ -41,71 +40,111 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero2 Widget ******************* -->
+  <!-- Hero Widget ******************* -->
 
   <Hero
     id='hero'
-    title='Sarah Johnson'
-    tagline='Personal Web Demo'
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    title='Find dit næste eventyr med Sanker—lige om hjørnet.'
+    tagline='Oplev, byt og værdsæt brugt friluftsudstyr med Sanker i nærheden. Sikkert, lokalt og fællesskabsdrevet.'
+    actions={[{ variant: 'primary', text: 'Begynd at udforske med Sanker', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot='subtitle'>
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      Sanker er dit lokale fællesskab for brugt friluftsudstyr. Vi forbinder dig med andre eventyrlystne i dit område,
+      så du kan finde det perfekte udstyr til dit næste outdoor-eventyr—sikkert, bæredygtigt og til en fair pris.
     </Fragment>
   </Hero>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id='features'
+    title='Hvorfor vælge Sanker?'
+    subtitle='Oplev en ny måde at finde og sælge friluftsudstyr på—lokalt, sikkert og fællesskabsdrevet.'
+    columns={2}
+    defaultIcon='tabler:point-filled'
+    items={[
+      {
+        icon: 'tabler:map-pin',
+        title: 'Opdag udstyr i nærheden',
+        description:
+          'Geo-baseret søgning med kraftfulde filtre—gennemse telte, cykler, støvler m.m. sorteret efter afstand, stand og pris.',
+      },
+      {
+        icon: 'tabler:shield-lock',
+        title: 'Kontroller dit privatliv',
+        description: 'Med Sanker vælger du, om du deler din præcise placering eller blot din by—din data, dit valg.',
+      },
+      {
+        icon: 'tabler:message-circle',
+        title: 'Chat sikkert og i realtid',
+        description: 'In-app beskeder og push-notifikationer holder dig øjeblikkeligt forbundet med sælgere.',
+      },
+      {
+        icon: 'tabler:heart',
+        title: 'Gem dine favoritter',
+        description: 'Bogmærk must-have-udstyr med ét tryk—opbyg din personlige ønskeliste.',
+      },
+      {
+        icon: 'tabler:trash',
+        title: 'Slet hurtigt og sikkert',
+        description:
+          'Slet din konto når som helst—fjern straks din profil, annoncer og chats for fuldstændig privatliv.',
+      },
+    ]}
+  />
 
   <!-- Content Widget **************** -->
 
   <Content
     id='about'
+    title='Om Sanker'
+    subtitle='Vi bygger bro mellem eventyrlystne og bæredygtig friluftsliv'
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:users',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: 'Bliv del af fællesskabet',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:leaf',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 'Bæredygtig valg',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:map-pin',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'Lokalt fokus',
           href: '#',
         },
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Colorful Image',
+      alt: 'Friluftsudstyr og eventyr',
       loading: 'eager',
     }}
   >
     <Fragment slot='content'>
-      <h2 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>About me</h2>
+      <h2 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>Vores mission</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Sanker blev skabt af en passion for friluftsliv og en overbevisning om, at bæredygtighed starter med at give
+        udstyr et nyt liv. Vi tror på styrken af lokale fællesskaber og sikker digital handel.
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        Vores platform gør det nemt at finde kvalitetsudstyr i dit område, møde ligesindede eventyrlystne, og bidrage
+        til en mere bæredygtig fremtid—én handel ad gangen.
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>Bliv del af vores voksende fællesskab og opdag en ny måde at udforske naturen på:</p>
     </Fragment>
 
     <Fragment slot='bg'>
@@ -116,199 +155,55 @@ const metadata = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id='resume'
-    title='Work experience'
+    id='safety'
+    title='Sikkerhed og tillid'
     items={[
       {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
+        title: 'Verificerede profiler <br /> <span class="font-normal">Kend din sælger</span>',
+        description: `Alle brugere gennemgår en grundig verifikationsproces. <br /> Se andre brugeres anmeldelser og ratings. <br /> Chat sikkert gennem vores in-app beskedfunktion. <br /> Mød op i offentlige, velbelyste områder.`,
+        icon: 'tabler:shield-check',
       },
       {
-        title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
+        title: 'Lokale møder <br /> <span class="font-normal">Sikker handel</span>',
+        description: `Vælg mødested i dit område—biblioteker, shoppingcentre eller andre offentlige steder. <br /> Inspicer altid udstyr før køb. <br /> Brug kontanter eller sikre betalingsmetoder. <br /> Tag en ven med til mødet hvis du føler dig utryg.`,
+        icon: 'tabler:map-pin',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    id='resume'
-    title='Education'
-    items={[
-      {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
-        icon: 'tabler:school',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title='Skills'
-    subtitle='Discover the proficiencies that allow me to bring imagination to life through design.'
-    columns={3}
-    defaultIcon='tabler:point-filled'
-    items={[
-      {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
-      },
-      {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
-      },
-      {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
-      },
-      {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
-      },
-      {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
-      },
-    ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
-    id='porfolio'
-    title='Elevating visual narratives'
-    subtitle='Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives.'
+    id='contact'
+    title='Kom i gang med Sanker'
+    subtitle='Bliv del af Danmarks hurtigst voksende friluftsudstyr-fællesskab'
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: 'Hurtig opsætning:',
         description:
-          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+          'Opret din profil på under 2 minutter. Tilføj dit område og dine interesser, så vi kan matche dig med relevant udstyr og andre eventyrlystne.',
       },
       {
-        title: 'Role:',
+        title: 'Find udstyr:',
         description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+          'Brug vores kraftfulde søgefunktion til at finde præcis det udstyr, du leder efter. Filtrer efter type, stand, pris og afstand.',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
+      alt: 'Friluftsudstyr og teknologi',
     }}
     callToAction={{
       target: '_blank',
-      text: 'Go to the project',
+      text: 'Download appen nu',
       icon: 'tabler:chevron-right',
       href: '#',
     }}
   >
     <Fragment slot='content'>
-      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>
-        Project 1: <br /><span class='text-2xl'>Brand identity for tech innovators</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot='bg'>
-      <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
-      },
-      {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot='content'>
-      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>
-        Project 2: <br /><span class='text-2xl'>Event poster for art & music festival</span>
-      </h3>
-    </Fragment>
-
-    <Fragment slot='bg'>
-      <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot='content'>
-      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>
-        Project 3: <br /><span class='text-2xl'>E-commerce website redesign for fashion brand</span>
-      </h3>
+      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>Sådan fungerer det</h3>
     </Fragment>
 
     <Fragment slot='bg'>
@@ -319,61 +214,61 @@ const metadata = {
   <!-- Testimonials Widget *********** -->
 
   <Testimonials
-    title='Client testimonials'
-    subtitle='Discover what clients have to say about their experiences working with me.'
+    title='Hvad vores brugere siger'
+    subtitle='Oplev historier fra andre eventyrlystne i Sanker-fællesskabet.'
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
+        testimonial: `Sanker har revolutioneret måden jeg finder friluftsudstyr på. Jeg fandt et perfekt telt til halv pris, og sælgeren var super venlig. Nu møder vi regelmæssigt til vandreture!`,
+        name: 'Mads Nielsen',
+        job: 'Vandrer og friluftsentusiast',
         image: {
           src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
+          alt: 'Mads Nielsen Image',
         },
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO',
+        testimonial: `Som nybegynder var det fantastisk at finde brugt udstyr til en overkommelig pris. Sanker's lokale fokus gjorde det nemt at møde op og se udstyret før køb.`,
+        name: 'Emma Hansen',
+        job: 'Friluftsnybegynder',
         image: {
           src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
+          alt: 'Emma Hansen Image',
         },
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO',
+        testimonial: `Jeg elsker at kunne give mit gamle udstyr et nyt liv gennem Sanker. Det føles godt at vide, at andre kan få glæde af det, og jeg tjener lidt penge på det også!`,
+        name: 'Lars Pedersen',
+        job: 'Erfaren friluftsentusiast',
         image: {
           src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
+          alt: 'Lars Pedersen Image',
         },
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
+        testimonial: `Sanker's sikkerhedsfunktioner giver mig ro i sindet. Jeg kan altid se, hvem jeg handler med, og møde op et sikkert sted. Det er som at handle med venner!`,
+        name: 'Sofie Andersen',
+        job: 'Cyklist og outdoor-elsker',
         image: {
           src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
+          alt: 'Sofie Andersen Image',
         },
       },
       {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
+        testimonial: `Endelig en platform der forstår friluftsliv! Jeg har fundet alt fra klatreudstyr til vintertøj gennem Sanker. Det lokale fællesskab er fantastisk.`,
+        name: 'Johan Christensen',
+        job: 'Klatrer og outdoor-instruktør',
         image: {
           src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
+          alt: 'Johan Christensen Image',
         },
       },
       {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
+        testimonial: `Sanker har gjort det nemt at komme i gang med friluftsliv uden at bruge en formue. Jeg har bygget hele min udstyrsamling gennem platformen og mødt fantastiske mennesker på vejen.`,
+        name: 'Maria Jensen',
+        job: 'Familieudflugts-entusiast',
         image: {
           src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
+          alt: 'Maria Jensen Image',
         },
       },
     ]}
@@ -382,12 +277,12 @@ const metadata = {
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
-    title="Let's create together"
-    subtitle='Ready to transform your vision into captivating designs?'
+    title='Klar til dit næste eventyr?'
+    subtitle='Tilslut dig Sanker-fællesskabet og opdag en verden af muligheder lige om hjørnet.'
     actions={[
       {
         variant: 'primary',
-        text: 'Hire me',
+        text: 'Begynd at udforske med Sanker',
         href: '/',
       },
     ]}
@@ -397,8 +292,8 @@ const metadata = {
 
   <BlogLatestPosts
     id='blog'
-    title='Explore my insightful articles on my blog'
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
+    title='Friluftsblog og tips'
+    information={`Få inspiration til dit næste outdoor-eventyr med vores artikler om friluftsliv, udstyr og bæredygtighed.`}
   >
     <Fragment slot='bg'>
       <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
