@@ -1,15 +1,10 @@
 ---
-import Layout from '~/layouts/PageLayout.astro';
-
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import SimpleFooter from '~/components/widgets/SimpleFooter.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
@@ -18,15 +13,11 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot='announcement'></Fragment>
   <Fragment slot='header'>
     <Header
       links={[
         { text: 'Hjem', href: '#' },
         { text: 'Om Sanker', href: '#about' },
-        { text: 'Funktioner', href: '#features' },
-        { text: 'Sikkerhed', href: '#safety' },
-        { text: 'Kontakt', href: '#contact' },
       ]}
       actions={[
         {
@@ -44,54 +35,15 @@ const metadata = {
 
   <Hero
     id='hero'
-    title='Find dit næste eventyr med Sanker—lige om hjørnet.'
-    tagline='Oplev, byt og værdsæt brugt friluftsudstyr med Sanker i nærheden. Sikkert, lokalt og fællesskabsdrevet.'
-    actions={[{ variant: 'primary', text: 'Begynd at udforske med Sanker', href: getPermalink('/contact#form') }]}
+    title='Køb og sælg brugt friluftsudstyr med Sanker'
+    tagline='Lokalt, nemt og bæredygtigt'
+    actions={[{ variant: 'primary', text: 'Begynd at udforske med Sanker', href: getPermalink('/#') }]}
   >
     <Fragment slot='subtitle'>
       Sanker er dit lokale fællesskab for brugt friluftsudstyr. Vi forbinder dig med andre eventyrlystne i dit område,
-      så du kan finde det perfekte udstyr til dit næste outdoor-eventyr—sikkert, bæredygtigt og til en fair pris.
+      så du kan finde det perfekte udstyr til dit næste outdoor-eventyr—sikkert.
     </Fragment>
   </Hero>
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    id='features'
-    title='Hvorfor vælge Sanker?'
-    subtitle='Oplev en ny måde at finde og sælge friluftsudstyr på—lokalt, sikkert og fællesskabsdrevet.'
-    columns={2}
-    defaultIcon='tabler:point-filled'
-    items={[
-      {
-        icon: 'tabler:map-pin',
-        title: 'Opdag udstyr i nærheden',
-        description:
-          'Geo-baseret søgning med kraftfulde filtre—gennemse telte, cykler, støvler m.m. sorteret efter afstand, stand og pris.',
-      },
-      {
-        icon: 'tabler:shield-lock',
-        title: 'Kontroller dit privatliv',
-        description: 'Med Sanker vælger du, om du deler din præcise placering eller blot din by—din data, dit valg.',
-      },
-      {
-        icon: 'tabler:message-circle',
-        title: 'Chat sikkert og i realtid',
-        description: 'In-app beskeder og push-notifikationer holder dig øjeblikkeligt forbundet med sælgere.',
-      },
-      {
-        icon: 'tabler:heart',
-        title: 'Gem dine favoritter',
-        description: 'Bogmærk must-have-udstyr med ét tryk—opbyg din personlige ønskeliste.',
-      },
-      {
-        icon: 'tabler:trash',
-        title: 'Slet hurtigt og sikkert',
-        description:
-          'Slet din konto når som helst—fjern straks din profil, annoncer og chats for fuldstændig privatliv.',
-      },
-    ]}
-  />
 
   <!-- Content Widget **************** -->
 
@@ -154,7 +106,7 @@ const metadata = {
 
   <!-- Steps Widget ****************** -->
 
-  <Steps
+  <!-- <Steps
     id='safety'
     title='Sikkerhed og tillid'
     items={[
@@ -170,11 +122,11 @@ const metadata = {
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
-  />
+  /> -->
 
   <!-- Content Widget **************** -->
 
-  <Content
+  <!-- <Content
     id='contact'
     title='Kom i gang med Sanker'
     subtitle='Bliv del af Danmarks hurtigst voksende friluftsudstyr-fællesskab'
@@ -206,14 +158,16 @@ const metadata = {
       <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>Sådan fungerer det</h3>
     </Fragment>
 
+
+    
     <Fragment slot='bg'>
       <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
     </Fragment>
-  </Content>
+  </Content> -->
 
   <!-- Testimonials Widget *********** -->
 
-  <Testimonials
+  <!-- <Testimonials
     title='Hvad vores brugere siger'
     subtitle='Oplev historier fra andre eventyrlystne i Sanker-fællesskabet.'
     testimonials={[
@@ -272,7 +226,7 @@ const metadata = {
         },
       },
     ]}
-  />
+  /> -->
 
   <!-- CallToAction Widget *********** -->
 
@@ -282,23 +236,11 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Begynd at udforske med Sanker',
+        text: 'Download appen',
         href: '/',
       },
     ]}
   />
-
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id='blog'
-    title='Friluftsblog og tips'
-    information={`Få inspiration til dit næste outdoor-eventyr med vores artikler om friluftsliv, udstyr og bæredygtighed.`}
-  >
-    <Fragment slot='bg'>
-      <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
-    </Fragment>
-  </BlogLatestPosts>
 
   <!-- Simple Footer **************** -->
 
