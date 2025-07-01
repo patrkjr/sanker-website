@@ -10,7 +10,7 @@ _Sidst opdateret_: 30. juni, 2025
 Vi er dataansvarlige for behandlingen af de personoplysninger, som vi behandler om vores kunder og samarbejdspartnere. Du finder vores kontaktoplysninger nedenfor.
 
 **Sanker**  
-Et produkt fra _**Comaker**, **MPV**_  
+Et produkt fra _**Comaker**, **EMV**_  
 Ørskovbæk Parken 1,
 8732 Hovedgård  
 CVR-nr.: 38545493
