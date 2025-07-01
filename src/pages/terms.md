@@ -3,7 +3,7 @@ title: 'Vilkår og betingelser'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-> **Version:** 30. juni 2025
+*Version: 30. juni 2025*
 
 Disse vilkår og betingelser (“**Vilkår**”) regulerer din adgang til og brug af Sanker-platformen (“**Tjenesten**”), der ejes og drives af **Sanker** (“**vi**”, “**os**”). Ved at tilgå eller bruge Tjenesten accepterer du at være bundet af disse Vilkår. Hvis du ikke kan acceptere Vilkårene, må du ikke bruge Tjenesten.
 
@@ -12,7 +12,7 @@ Disse vilkår og betingelser (“**Vilkår**”) regulerer din adgang til og bru
 ## Oplysninger om virksomheden
 
 **Sanker**  
-Et produkt fra _**Comaker**, **MPV**_  
+Et produkt fra _**Comaker**, **EMV**_  
 Ørskovbæk Parken 1,
 8732 Hovedgård  
 CVR-nr.: 38545493  
