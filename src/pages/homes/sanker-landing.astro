@@ -1,8 +1,7 @@
 ---
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Content from '~/components/widgets/Content.astro';
+import sankerAppImage from '~/assets/images/sanker-app-1-phone.png';
 import Header from '~/components/widgets/Header.astro';
-import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import SimpleFooter from '~/components/widgets/SimpleFooter.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
@@ -16,8 +15,8 @@ const metadata = {
   <Fragment slot='header'>
     <Header
       links={[
-        { text: 'Hjem', href: '#' },
-        { text: 'Om Sanker', href: '#about' },
+        // { text: 'Hjem', href: '#' },
+        // { text: 'Om Sanker', href: '#about' },
       ]}
       actions={[
         {
@@ -31,216 +30,24 @@ const metadata = {
     />
   </Fragment>
 
-  <!-- Hero Widget ******************* -->
+  <!-- Hero2 Widget ******************* -->
 
-  <Hero
+  <Hero2
     id='hero'
     title='Køb og sælg brugt friluftsudstyr med Sanker'
     tagline='Lokalt, nemt og bæredygtigt'
     actions={[{ variant: 'primary', text: 'Begynd at udforske med Sanker', href: getPermalink('/#') }]}
+    image={{
+      src: sankerAppImage,
+      alt: 'Sanker app på iPhone',
+      loading: 'eager',
+    }}
   >
     <Fragment slot='subtitle'>
       Sanker er dit lokale fællesskab for brugt friluftsudstyr. Vi forbinder dig med andre eventyrlystne i dit område,
       så du kan finde det perfekte udstyr til dit næste outdoor-eventyr—sikkert.
     </Fragment>
-  </Hero>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    id='about'
-    title='Om Sanker'
-    subtitle='Vi bygger bro mellem eventyrlystne og bæredygtig friluftsliv'
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:users',
-        callToAction: {
-          target: '_blank',
-          text: 'Bliv del af fællesskabet',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:leaf',
-        callToAction: {
-          target: '_blank',
-          text: 'Bæredygtig valg',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:map-pin',
-        callToAction: {
-          target: '_blank',
-          text: 'Lokalt fokus',
-          href: '#',
-        },
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Friluftsudstyr og eventyr',
-      loading: 'eager',
-    }}
-  >
-    <Fragment slot='content'>
-      <h2 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>Vores mission</h2>
-      <p>
-        Sanker blev skabt af en passion for friluftsliv og en overbevisning om, at bæredygtighed starter med at give
-        udstyr et nyt liv. Vi tror på styrken af lokale fællesskaber og sikker digital handel.
-      </p>
-      <br />
-      <p>
-        Vores platform gør det nemt at finde kvalitetsudstyr i dit område, møde ligesindede eventyrlystne, og bidrage
-        til en mere bæredygtig fremtid—én handel ad gangen.
-      </p>
-      <br />
-      <p>Bliv del af vores voksende fællesskab og opdag en ny måde at udforske naturen på:</p>
-    </Fragment>
-
-    <Fragment slot='bg'>
-      <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <!-- <Steps
-    id='safety'
-    title='Sikkerhed og tillid'
-    items={[
-      {
-        title: 'Verificerede profiler <br /> <span class="font-normal">Kend din sælger</span>',
-        description: `Alle brugere gennemgår en grundig verifikationsproces. <br /> Se andre brugeres anmeldelser og ratings. <br /> Chat sikkert gennem vores in-app beskedfunktion. <br /> Mød op i offentlige, velbelyste områder.`,
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Lokale møder <br /> <span class="font-normal">Sikker handel</span>',
-        description: `Vælg mødested i dit område—biblioteker, shoppingcentre eller andre offentlige steder. <br /> Inspicer altid udstyr før køb. <br /> Brug kontanter eller sikre betalingsmetoder. <br /> Tag en ven med til mødet hvis du føler dig utryg.`,
-        icon: 'tabler:map-pin',
-      },
-    ]}
-    classes={{ container: 'max-w-3xl' }}
-  /> -->
-
-  <!-- Content Widget **************** -->
-
-  <!-- <Content
-    id='contact'
-    title='Kom i gang med Sanker'
-    subtitle='Bliv del af Danmarks hurtigst voksende friluftsudstyr-fællesskab'
-    isReversed
-    items={[
-      {
-        title: 'Hurtig opsætning:',
-        description:
-          'Opret din profil på under 2 minutter. Tilføj dit område og dine interesser, så vi kan matche dig med relevant udstyr og andre eventyrlystne.',
-      },
-      {
-        title: 'Find udstyr:',
-        description:
-          'Brug vores kraftfulde søgefunktion til at finde præcis det udstyr, du leder efter. Filtrer efter type, stand, pris og afstand.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Friluftsudstyr og teknologi',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Download appen nu',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot='content'>
-      <h3 class='text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2'>Sådan fungerer det</h3>
-    </Fragment>
-
-
-    
-    <Fragment slot='bg'>
-      <div class='absolute inset-0 bg-green-50 dark:bg-transparent'></div>
-    </Fragment>
-  </Content> -->
-
-  <!-- Testimonials Widget *********** -->
-
-  <!-- <Testimonials
-    title='Hvad vores brugere siger'
-    subtitle='Oplev historier fra andre eventyrlystne i Sanker-fællesskabet.'
-    testimonials={[
-      {
-        testimonial: `Sanker har revolutioneret måden jeg finder friluftsudstyr på. Jeg fandt et perfekt telt til halv pris, og sælgeren var super venlig. Nu møder vi regelmæssigt til vandreture!`,
-        name: 'Mads Nielsen',
-        job: 'Vandrer og friluftsentusiast',
-        image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mads Nielsen Image',
-        },
-      },
-      {
-        testimonial: `Som nybegynder var det fantastisk at finde brugt udstyr til en overkommelig pris. Sanker's lokale fokus gjorde det nemt at møde op og se udstyret før køb.`,
-        name: 'Emma Hansen',
-        job: 'Friluftsnybegynder',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emma Hansen Image',
-        },
-      },
-      {
-        testimonial: `Jeg elsker at kunne give mit gamle udstyr et nyt liv gennem Sanker. Det føles godt at vide, at andre kan få glæde af det, og jeg tjener lidt penge på det også!`,
-        name: 'Lars Pedersen',
-        job: 'Erfaren friluftsentusiast',
-        image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Lars Pedersen Image',
-        },
-      },
-      {
-        testimonial: `Sanker's sikkerhedsfunktioner giver mig ro i sindet. Jeg kan altid se, hvem jeg handler med, og møde op et sikkert sted. Det er som at handle med venner!`,
-        name: 'Sofie Andersen',
-        job: 'Cyklist og outdoor-elsker',
-        image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Sofie Andersen Image',
-        },
-      },
-      {
-        testimonial: `Endelig en platform der forstår friluftsliv! Jeg har fundet alt fra klatreudstyr til vintertøj gennem Sanker. Det lokale fællesskab er fantastisk.`,
-        name: 'Johan Christensen',
-        job: 'Klatrer og outdoor-instruktør',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Johan Christensen Image',
-        },
-      },
-      {
-        testimonial: `Sanker har gjort det nemt at komme i gang med friluftsliv uden at bruge en formue. Jeg har bygget hele min udstyrsamling gennem platformen og mødt fantastiske mennesker på vejen.`,
-        name: 'Maria Jensen',
-        job: 'Familieudflugts-entusiast',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Maria Jensen Image',
-        },
-      },
-    ]}
-  /> -->
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    title='Klar til dit næste eventyr?'
-    subtitle='Tilslut dig Sanker-fællesskabet og opdag en verden af muligheder lige om hjørnet.'
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Download appen',
-        href: '/',
-      },
-    ]}
-  />
+  </Hero2>
 
   <!-- Simple Footer **************** -->
 
