@@ -15,7 +15,7 @@ Et produkt fra _**Comaker**, **EMV**_
 8732 Hovedgård  
 CVR-nr.: 38545493
 
-Det er ikke et krav, at vores virksomhed har en ekstern DPO, men hvis du har spørgsmål til behandlingen af dine personoplysninger, kan du kontakte os via **p.kjr@icloud.com**.
+Det er ikke et krav, at vores virksomhed har en ekstern DPO, men hvis du har spørgsmål til behandlingen af dine personoplysninger, kan du kontakte os via **info@sanker.app**.
 
 ---
 
@@ -129,7 +129,7 @@ Du har efter databeskyttelsesforordningen en række rettigheder vedrørende vore
 - **Indsigelse** mod behandling og mod direkte markedsføring
 - **Dataportabilitet** i visse tilfælde
 
-Læs mere i Datatilsynets vejledning på www.datatilsynet.dk. Kontakt os via **p.kjr@icloud.com** for at gøre brug af dine rettigheder.
+Læs mere i Datatilsynets vejledning på www.datatilsynet.dk. Kontakt os via **info@sanker.app** for at gøre brug af dine rettigheder.
 
 ### Tilbagetrækning af samtykke
 
