@@ -93,8 +93,6 @@ Vi anvender eksterne leverandører (databehandlere) for at drive og udvikle Sank
 | Stripe Payments Europe Ltd. | Betalingsbehandling                                |
 | [PASTE HERE]                | [PASTE HERE – supplerende databehandler og formål] | -->
 
-Vi stiller høje krav til vores databehandlere og indgår databehandleraftaler for at sikre, at dine personoplysninger er beskyttet.
-
 ---
 
 ## Videregivelse af personoplysninger
