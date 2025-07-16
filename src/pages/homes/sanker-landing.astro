@@ -4,7 +4,6 @@ import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import SimpleFooter from '~/components/widgets/SimpleFooter.astro';
 import Layout from '~/layouts/PageLayout.astro';
-import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
   title: 'Sanker - Find dit næste eventyr',
@@ -21,7 +20,8 @@ const metadata = {
       actions={[
         {
           text: 'Download appen',
-          href: '#',
+          href: 'https://apps.apple.com/us/app/sanker-outdoor-markedsplads/id6747646239',
+          target: '_blank',
         },
       ]}
       isSticky
@@ -36,7 +36,14 @@ const metadata = {
     id='hero'
     title='Køb og sælg brugt friluftsudstyr med Sanker'
     tagline='Lokalt, nemt og bæredygtigt'
-    actions={[{ variant: 'primary', text: 'Begynd at udforske med Sanker', href: getPermalink('/#') }]}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Begynd at udforske med Sanker',
+        href: 'https://apps.apple.com/us/app/sanker-outdoor-markedsplads/id6747646239',
+        target: '_blank',
+      },
+    ]}
     image={{
       src: sankerAppImage,
       alt: 'Sanker app på iPhone',
