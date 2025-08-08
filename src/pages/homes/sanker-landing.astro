@@ -1,5 +1,8 @@
 ---
 import sankerAppImage from '~/assets/images/sanker-app-1-phone.png';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 import Header from '~/components/widgets/Header.astro';
 import Hero2 from '~/components/widgets/Hero2.astro';
 import SimpleFooter from '~/components/widgets/SimpleFooter.astro';
@@ -8,6 +11,12 @@ import Layout from '~/layouts/PageLayout.astro';
 const metadata = {
   title: 'Sanker - Find dit næste eventyr',
 };
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://apps.apple.com/us/app/sanker-outdoor-marketplace/id6747646239';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://play.google.com/store/apps/details?id=com.ptrkjr.sanker';
 ---
 
 <Layout metadata={metadata}>
@@ -20,8 +29,8 @@ const metadata = {
       actions={[
         {
           text: 'Download appen',
-          href: 'https://apps.apple.com/us/app/sanker-outdoor-markedsplads/id6747646239',
-          target: '_blank',
+          href: '/#download',
+          target: '_self',
         },
       ]}
       isSticky
@@ -56,7 +65,22 @@ const metadata = {
     </Fragment>
   </Hero2>
 
-  <!-- Simple Footer **************** -->
+  <CallToAction
+    id='download'
+    title='Download appen'
+    subtitle='Køb og sælg brugt outdoorudstyre med Sanker allerede i dag'
+  >
+    <div slot='actions' class='flex max-w-sm gap-4'>
+      <Button variant='link' href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt='App Store Image' width={200} />
+      </Button>
 
+      <Button variant='link' href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt='Google Play Image' width={200} />
+      </Button>
+    </div>
+  </CallToAction>
+
+  <!-- Simple Footer **************** -->
   <SimpleFooter />
 </Layout>

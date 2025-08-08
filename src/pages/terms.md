@@ -3,7 +3,7 @@ title: 'Vilkår og betingelser'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Version: 30. juni 2025_
+_Version: 8. August 2025_
 
 Disse vilkår og betingelser (“**Vilkår**”) regulerer din adgang til og brug af Sanker-platformen (“**Tjenesten**”), der ejes og drives af **Sanker** (“**vi**”, “**os**”). Ved at tilgå eller bruge Tjenesten accepterer du at være bundet af disse Vilkår. Hvis du ikke kan acceptere Vilkårene, må du ikke bruge Tjenesten.
 
@@ -80,6 +80,15 @@ Du kan til enhver tid opsige din konto via konto-indstillingerne. Vi kan opsige 
 
 ---
 
+## Kommunikation og e-mails (ingen spam)
+
+- Vi sender lejlighedsvise e-mails om tjenesteopdateringer eller andre vigtige informationer.
+- Vi spammer ikke.
+- Nødvendige drifts- og sikkerhedsbeskeder kan ikke fravælges.
+- Behandling sker i henhold til vores [Privatlivspolitik](privacy) og gældende markedsføringsregler.
+
+---
+
 ## Ændringer af Vilkårene
 
 Vi kan opdatere Vilkårene. Væsentlige ændringer varsles mindst 14 dage før ikrafttræden via e-mail eller i Tjenesten. Din fortsatte brug efter ikrafttræden udgør accept af de opdaterede Vilkår.
@@ -95,7 +104,3 @@ Disse Vilkår er underlagt dansk ret. Enhver tvist, der måtte opstå i forbinde
 ## Kontakt
 
 Spørgsmål til Vilkårene kan rettes til **info@sanker.app**.
-
----
-
-> Senest opdateret: [30. juni 2025]
